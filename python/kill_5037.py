@@ -11,7 +11,7 @@ import os
 
 from scriptUtils import utils
 
-#5037端口占用时杀掉占用该端口的进程
+#5037端口占用时，杀掉占用该端口的进程
 
 def linux():
     pid = os.popen("netstat -anop | grep 5037 | grep  LISTEN").read().split()[6].split("/")[0]
